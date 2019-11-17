@@ -20,7 +20,6 @@ body
 	font-size: 18px
 	min-width: 320px
 	position: relative
-	line-height: 1.65
 	font-family: 'GothamPro', sans-serif
 	overflow-x: hidden
 
@@ -48,5 +47,40 @@ h1, h2
   
 @media (min-width: 1200px) 
   .container 
-    max-width: 1140px
+    max-width: 1170px
 
+section.first
+	position: relative
+	width: 100%
+	height: 100vh
+	padding-top: 40px
+	background-image: url('../img/@2x/header_bg.png')
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	header
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+	.logo
+		display: flex
+		justify-content: space-between
+		width: 270px
+		align-items: flex-end
+		&__description
+			color: #ffffff
+			font-size: 14px
+	.personal
+		text-align: right
+		h3
+			color: $accent
+			font-size: 24px
+			letter-spacing: 0.05em
+			margin: 0
+			@extend %muller
+		&__description
+			font-size: 14px
+			margin-bottom: 25px
+		&__instagram
+			font-size: 14px
+			font-weight: bold
