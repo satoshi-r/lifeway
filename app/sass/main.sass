@@ -137,3 +137,44 @@ section.first
 		&__question
 			line-height: 1.2
 			width: 130px
+
+section.whatfor
+	padding-top: 140px
+	position: relative
+	.container
+		position: relative
+	h2
+		@extend %muller
+		font-weight: bold
+		font-size: 42px
+		padding-left: 85px
+		position: relative
+		&:after
+			content: ''
+			border-radius: 1px
+			width: 72px
+			height: 4px
+			background-color: $accent
+			display: block
+			margin-top: 20px
+			position: relative
+			z-index: 1
+	.title-bg
+		@extend %muller
+		font-size: 441px
+		position: absolute
+		right: 0
+		top: -260px
+		opacity: 0.15
+		color: $accent
+		user-select: none
+	.whatfor-content__wrap
+		margin-top: 70px
+		width: 100%
+		position: relative
+		z-index: 2
+		background-image: url(../img/@2x/whatfor-bg.png)
+		background-repeat: no-repeat
+		background-size: cover
+		height: 650px
+		background-position: center
