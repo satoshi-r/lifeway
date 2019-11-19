@@ -26,6 +26,22 @@ body
 h1, h2
 	font-family: 'MullerBold', sans-serif
 
+.btn
+	outline: none
+	letter-spacing: 0.05em
+	text-transform: uppercase
+	font-size: 14px
+	color: #ffffff
+	text-align: center
+	padding: 0
+	background-color: $accent
+	border-radius: 5px
+	will-change: transform
+	border: 0
+	font-weight: bold
+	&:hover
+		background-color: #c4906b
+
 .container
   width: 100%
   padding-right: 15px
@@ -54,10 +70,16 @@ section.first
 	width: 100%
 	height: 100vh
 	padding-top: 40px
+	padding-bottom: 90px
 	background-image: url('../img/@2x/header_bg.png')
 	background-size: cover
 	background-repeat: no-repeat
 	background-position: center
+	.container
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		height: 100%
 	header
 		display: flex
 		align-items: flex-start
@@ -94,24 +116,24 @@ section.first
 		h1
 			font-size: 42px
 			margin-bottom: 30px
-			line-height: ‭0.054‬em
+			line-height: 1.2
 			letter-spacing: 0.05em
 		&__description
 			margin-bottom: 80px
 		&__btn
-			outline: none
-			letter-spacing: 0.05em
-			text-transform: uppercase
-			font-size: 14px
-			color: #ffffff
 			width: 240px
 			height: 60px
-			text-align: center
-			padding: 0
-			background-color: $accent
-			border-radius: 5px
-			will-change: transform
-			border: 0
-			
-
-
+	.down-arrow
+		font-size: 14px
+		color: #fff
+		display: flex
+		align-items: center
+		justify-content: space-between
+		width: 160px
+		&:hover
+			color: #fff
+			cursor: pointer
+			opacity: 0.7
+		&__question
+			line-height: 1.2
+			width: 130px
