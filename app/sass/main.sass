@@ -138,6 +138,7 @@ h1, h2
 		&__question
 			line-height: 1.2
 			width: 130px
+			color: #fff
 
 .whatfor
 	padding-top: 140px
@@ -193,3 +194,38 @@ h1, h2
 		border-left: 1px solid $accent
 		p:last-child()
 			margin: 0
+	&__resolve
+		padding-top: 140px
+		position: relative
+		h3
+			@extend %muller
+			font-size: 32px
+			line-height: 1
+			text-align: center
+			margin-bottom: 65px
+		&-wrap
+			display: flex
+			flex-direction: row
+			justify-content: center
+			flex-wrap: wrap
+	.resolve__block
+		border: 1px solid $accent
+		border-radius: 10px
+		display: flex
+		align-items: center
+		width: 500px
+		padding: 40px
+		margin-bottom: 50px
+		&:nth-child(odd)
+			margin-right: 50px
+		img
+			width: 96px
+			height: 96px
+	.resolve__text-wrap
+		margin-left: 30px
+	.resolve__title
+		font-weight: bold
+	.resolve__text
+		font-size: 14px
+		margin-top: 20px
+
