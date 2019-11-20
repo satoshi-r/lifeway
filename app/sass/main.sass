@@ -23,8 +23,33 @@ body
 	font-family: 'GothamPro', sans-serif
 	overflow-x: hidden
 
+section
+	position: relative
+
 h1, h2
 	font-family: 'MullerBold', sans-serif
+
+h2
+	font-weight: bold
+	font-size: 42px
+	padding-left: 85px
+	position: relative
+	&:after
+		content: ''
+		border-radius: 1px
+		width: 72px
+		height: 4px
+		background-color: $accent
+		display: block
+		margin-top: 20px
+		position: relative
+		z-index: 1
+
+.show
+	display: block
+
+.hide
+	display: none
 
 .btn
 	outline: none
@@ -142,25 +167,8 @@ h1, h2
 
 .whatfor
 	padding-top: 140px
-	position: relative
 	.container
 		position: relative
-	h2
-		@extend %muller
-		font-weight: bold
-		font-size: 42px
-		padding-left: 85px
-		position: relative
-		&:after
-			content: ''
-			border-radius: 1px
-			width: 72px
-			height: 4px
-			background-color: $accent
-			display: block
-			margin-top: 20px
-			position: relative
-			z-index: 1
 	.title-bg
 		@extend %muller
 		font-size: 441px
@@ -223,9 +231,71 @@ h1, h2
 			height: 96px
 	.resolve__text-wrap
 		margin-left: 30px
+		line-height: 1.3
 	.resolve__title
 		font-weight: bold
 	.resolve__text
 		font-size: 14px
 		margin-top: 20px
 
+.scientific
+	padding-top: 140px
+	.container
+		position: relative
+	&__title-img
+		background-image: url('../img/@2x/biology.png')
+		background-size: contain
+		background-repeat: no-repeat
+		position: absolute
+		width: 87px
+		height: 83px
+		top: 0
+		right: 0
+	&__title-description
+		color: #7b7b7b
+		margin-top: 60px
+		margin-bottom: 60px
+		width: 60%
+		padding-left: 85px
+	&__block
+		margin: auto
+		width: 1320px
+		height: 900px
+		border-radius: 15px
+		background-color: #faf5f1
+		display: flex
+	&__tabs
+		list-style-type: none
+		padding-left: 75px
+		padding-top: 120px
+		margin: 0	
+		background-image: url('../img/@2x/scientific-img.png')
+		background-repeat: no-repeat
+		background-position: right
+		width: 26%
+		height: 100%
+		border-top-left-radius: 15px
+		border-bottom-left-radius: 15px
+		&-item
+			color: #cacaca
+			font-weight: bold
+			font-size: 20px
+			margin-bottom: 50px
+			cursor: pointer
+			position: relative
+			line-height: 1.2
+		.focus
+			color: #fff
+			font-size: 24px
+			padding-left: 40px
+			&:before
+				content: ''
+				position: absolute
+				width: 48px
+				height: 2px
+				border-radius: 1px
+				background-color: $accent
+				top: 0
+				bottom: 0
+				left: -35px
+				margin: auto
