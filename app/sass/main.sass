@@ -66,6 +66,9 @@ h2
 	font-weight: bold
 	&:hover
 		background-color: #c4906b
+	&:active, &:focus
+		border: 0
+		outline: 0
 
 .container
   width: 100%
@@ -298,3 +301,37 @@ h2
 				bottom: 0
 				left: -35px
 				margin: auto
+	.tab-content
+		padding-left: 80px
+		padding-top: 70px
+		padding-right: 75px
+		flex-grow: 1
+		&__title
+			font-size: 24px
+			margin-bottom: 40px
+		&__description
+			margin-bottom: 50px
+	
+	.accordion
+		background-color: transparent
+		font-weight: bold
+		color: #000000
+		padding: 20px
+		width: 100%
+		text-align: left
+		text-transform: unset
+		outline: none
+		border: 0
+		font-weight: bold
+		transition: 0.4s
+		&:active, &:focus
+			outline: 0
+		&:first-of-type
+			border-top: 1px solid #f0e5d8
+		&__panel
+			padding: 0 20px
+			max-height: 0
+			overflow: hidden
+			transition: max-height 0.2s ease-out
+			border-bottom: 1px solid #f0e5d8
+		

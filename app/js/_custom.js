@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-
-	let tab = document.getElementsByClassName('scientific__tabs-item'),
+	// Tabs
+	const tab = document.getElementsByClassName('scientific__tabs-item'),
 		tabContent = document.getElementsByClassName('tab-content'),
 		info = document.getElementsByClassName('scientific__tabs')[0];
 
@@ -33,7 +33,24 @@ document.addEventListener("DOMContentLoaded", function () {
 				}
 			}
 		}
-		
 	});
 
+	// Accordion
+	const acc = document.getElementsByClassName("accordion"),
+	lastAcc = document.querySelectorAll(".accordion:last-of-type");
+	
+	for (i = 0; i < acc.length; i++) {
+		acc[i].addEventListener("click", function () {
+			this.classList.toggle("active");
+			let panel = this.nextElementSibling,
+				heightVal = panel.scrollHeight + 40;
+			if (panel.style.maxHeight) {
+				// panel.style.padding = null;
+				panel.style.maxHeight = null;
+			} else {
+				panel.style.maxHeight = heightVal + "px";
+				// panel.style.padding = '20px';
+			}
+		});
+	}
 });
