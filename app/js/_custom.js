@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
 	let tab = document.getElementsByClassName('scientific__tabs-item'),
-		tabContent = document.getElementsByClassName('scientific__tab-content'),
+		tabContent = document.getElementsByClassName('tab-content'),
 		info = document.getElementsByClassName('scientific__tabs')[0];
 
 	function hideTabContent(a) {
@@ -25,12 +25,15 @@ document.addEventListener("DOMContentLoaded", function () {
 		let target = event.target;
 		if (target.className == 'scientific__tabs-item') {
 			for (let i = 0; i < tab.length; i++) {
+				tab[i].classList.remove('focus');
 				if (target == tab[i]) {
+					target.classList.add('focus');
 					showTabContent(i);
-					break;
+					// break;
 				}
 			}
 		}
+		
 	});
 
 });
