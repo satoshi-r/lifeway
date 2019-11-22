@@ -44,8 +44,12 @@ document.addEventListener("DOMContentLoaded", function () {
 			let panel = this.nextElementSibling;
 			if (panel.style.maxHeight) {
 				panel.style.maxHeight = null;
+				setTimeout(() => {
+					this.style.marginBottom = '0px';
+				}, 200);
 			} else {
 				panel.style.maxHeight = panel.scrollHeight + "px";
+				this.style.marginBottom = '20px';
 			}
 			
 		});
