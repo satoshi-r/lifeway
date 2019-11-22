@@ -21,7 +21,6 @@
 		"gulp-responsive": "^2.14.0",
 		"gulp-rsync": "0.0.8",
 		"gulp-sass": "^4.0.2",
-		"gulp-sourcemaps": "^2.6.5",
 		"gulp-uglify-es": "^1.0.4"
 	}
 }

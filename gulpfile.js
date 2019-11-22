@@ -3,7 +3,6 @@ var gulp         = require('gulp'),
 		browserSync  = require('browser-sync'),
 		concat       = require('gulp-concat'),
 		uglify       = require('gulp-uglify-es').default,
-		sourcemaps 	 = require('gulp-sourcemaps'),
 		cleancss     = require('gulp-clean-css'),
 		autoprefixer = require('gulp-autoprefixer'),
 		rsync        = require('gulp-rsync'),
@@ -28,7 +27,6 @@ function bsReload(done) { browserSync.reload(); done(); };
 // Custom Styles
 gulp.task('styles', function() {
 	return gulp.src('app/sass/**/*.sass')
-	.pipe(sourcemaps.init())
 	.pipe(sass({
 		outputStyle: 'expanded',
 		includePaths: [__dirname + '/node_modules']
@@ -39,7 +37,6 @@ gulp.task('styles', function() {
 		overrideBrowserslist: ['last 10 versions']
 	}))
 	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Optional. Comment out when debugging
-	.pipe(sourcemaps.write())
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.stream())
 });
@@ -51,10 +48,8 @@ gulp.task('scripts', function() {
 		'app/js/_libs.js', // JS libraries (all in one)
 		'app/js/_custom.js', // Custom scripts. Always at the end
 		])
-	.pipe(sourcemaps.init())
 	.pipe(concat('scripts.min.js'))
 	.pipe(uglify()) // Minify js (opt.)
-	.pipe(sourcemaps.write())
 	.pipe(gulp.dest('app/js'))
 	.pipe(browserSync.reload({ stream: true }))
 });
