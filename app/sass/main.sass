@@ -1,97 +1,8 @@
 @import vars
 @import fonts
 @import libs
+@import general
 
-::placeholder
-	color: #666
-
-::selection
-	background-color: $accent
-	color: #fff
-
-input, textarea
-	outline: none
-	&:focus:required:invalid
-		border-color: red
-	&:required:valid
-		border-color: green
-
-body
-	font-size: 18px
-	min-width: 320px
-	position: relative
-	font-family: 'GothamPro', sans-serif
-	overflow-x: hidden
-
-section
-	position: relative
-
-h1, h2
-	font-family: 'MullerBold', sans-serif
-
-h2
-	font-weight: bold
-	font-size: 42px
-	padding-left: 85px
-	position: relative
-	&:after
-		content: ''
-		border-radius: 1px
-		width: 72px
-		height: 4px
-		background-color: $accent
-		display: block
-		margin-top: 20px
-		position: relative
-		z-index: 1
-
-.show
-	display: block
-
-.hide
-	display: none
-
-.btn
-	outline: none
-	letter-spacing: 0.05em
-	text-transform: uppercase
-	font-size: 14px
-	color: #ffffff
-	text-align: center
-	padding: 0
-	background-color: $accent
-	border-radius: 5px
-	will-change: transform
-	border: 0
-	font-weight: bold
-	&:hover
-		background-color: #c4906b
-	&:active, &:focus
-		border: 0
-		outline: 0
-
-.container
-  width: 100%
-  padding-right: 15px
-  padding-left: 15px
-  margin-right: auto
-  margin-left: auto
-
-@media (min-width: 576px) 
-  .container 
-    max-width: 540px
-  
-@media (min-width: 768px) 
-  .container 
-    max-width: 720px
-  
-@media (min-width: 992px) 
-  .container 
-    max-width: 960px
-  
-@media (min-width: 1200px) 
-  .container 
-    max-width: 1170px
 
 .first
 	position: relative
@@ -301,11 +212,13 @@ h2
 				bottom: 0
 				left: -35px
 				margin: auto
+
 	.tab-content
 		padding-left: 80px
 		padding-top: 70px
 		padding-right: 75px
 		flex-grow: 1
+		transition: 0.4s
 		&__title
 			font-size: 24px
 			margin-bottom: 40px
@@ -317,13 +230,15 @@ h2
 		font-weight: bold
 		color: #000000
 		padding: 20px
+		padding-right: 100px
 		width: 100%
 		text-align: left
 		text-transform: unset
 		outline: none
 		border: 0
 		font-weight: bold
-		transition: 0.4s
+		position: relative
+		background: url('../img/@2x/open-button.png') no-repeat 96% 50%
 		&:active, &:focus
 			outline: 0
 		&:first-of-type
@@ -334,4 +249,14 @@ h2
 			overflow: hidden
 			transition: max-height 0.2s ease-out
 			border-bottom: 1px solid #f0e5d8
-		
+			&-addition
+				margin-top: 40px
+				margin-bottom: 20px
+				a
+					border-bottom: 1px solid #cfcac7
+	.active
+		background: url('../img/@2x/close-button.png') no-repeat 95.3% 50%
+		margin-bottom: 20px
+
+
+  
