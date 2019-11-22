@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	for (i = 0; i < acc.length; i++) {
 		acc[i].addEventListener("click", function () {
 			this.classList.toggle("active");
-			let panel = this.nextElementSibling,
+			let panel = this.nextElementSibling;
 			if (panel.style.maxHeight) {
 				panel.style.maxHeight = null;
 			} else {
