@@ -226,7 +226,8 @@
 			margin-bottom: 40px
 		&__description
 			margin-bottom: 50px
-	
+	.accordion-wrap
+		padding-bottom: 70px
 	.accordion
 		background-color: transparent
 		font-weight: bold
@@ -260,5 +261,51 @@
 		background: url('../img/@2x/close-button.png') no-repeat 95.3% 50%
 		transition: 0.2s
 
-
-  
+.about
+	padding-top: 200px
+	&-title__description
+		color: #7b7b7b
+		margin-top: 60px
+		margin-bottom: 60px
+		width: 56%
+		padding-left: 85px
+	&-img
+		position: relative
+		bottom: 112px
+		width: 40%
+	&-wrap
+		display: flex
+		flex-direction: row
+		justify-content: flex-end
+	&-list
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		flex-wrap: wrap
+		width: 60%
+		height: 665px
+		padding: 0
+		margin: 0
+		padding-left: 15vw
+	&-item
+		display: flex
+		justify-content: flex-start
+		width: 400px
+		margin-bottom: 50px
+		margin-right: 20px
+		&__number
+			min-width: 48px
+			height: 48px
+			border: 2px solid $accent
+			border-radius: 50%
+			display: flex
+			align-items: center
+			justify-content: center
+			font-weight: bold
+			margin-right: 25px
+			margin-top: 5px
+		&__title
+			font-weight: bold
+			margin-bottom: 20px
+		&__description
+			font-size: 14px
