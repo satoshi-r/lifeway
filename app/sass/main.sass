@@ -273,6 +273,8 @@
 		position: relative
 		bottom: 112px
 		width: 40%
+		object-fit: cover
+		z-index: 1
 	&-wrap
 		display: flex
 		flex-direction: row
@@ -287,6 +289,7 @@
 		padding: 0
 		margin: 0
 		padding-left: 15vw
+		z-index: 2
 	&-item
 		display: flex
 		justify-content: flex-start
@@ -309,3 +312,90 @@
 			margin-bottom: 20px
 		&__description
 			font-size: 14px
+
+.content
+	padding-top: 120px
+	.container
+		position: relative
+	&__title-description
+		color: #7b7b7b
+		margin-top: 60px
+		margin-bottom: 60px
+		width: 60%
+		padding-left: 85px
+	&__title-img
+		background-image: url('../img/@2x/bullets.png')
+		background-size: contain
+		background-repeat: no-repeat
+		position: absolute
+		width: 54px
+		height: 52px
+		top: 18px
+		right: 18px
+	&-wrap
+		display: flex
+		min-height: 800px
+		width: 100%
+	&-item
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+		width: 25%
+		position: relative
+		padding: 80px 0
+		display: flex
+		flex-direction: column
+		text-align: center
+		color: #fff
+		justify-content: flex-end
+		&:first-child
+			background-image: url('../img/@2x/content_basics1.png')
+		&:nth-child(2)
+			background-image: url('../img/@2x/content_basics2.png')
+		&:nth-child(3)
+			background-image: url('../img/@2x/content_basics3.png')
+		&:last-child
+			background-image: url('../img/@2x/content_basics4.png')
+		&__title
+			@extend %muller
+			font-size: 32px
+			text-align: center
+			width: 100%
+			
+			color: #fff
+			&-step
+				font-family: 'GothamPro', sans-serif
+				font-size: 18px
+				font-weight: bold
+		&__list
+			display: none
+			padding: 0
+			margin: 0
+			text-align: left
+			width: 300px
+			margin: auto
+			list-style-position: inside
+			&-item
+				margin-bottom: 30px
+				line-height: 1
+				&::marker
+					font-weight: bold
+					color: $accent
+		&__btn
+			display: none
+			color: $accent
+			text-decoration: underline
+			text-transform: uppercase
+			font-size: 14px
+			text-align: center
+			font-weight: bold
+			&:hover
+				color: $accent
+				text-decoration: none
+				opacity: 0.8
+		&:hover
+			justify-content: flex-start
+			.content-item__list, .content-item__btn
+				animation-name: fade
+				animation-duration: .5s
+				display: block
