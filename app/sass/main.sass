@@ -405,18 +405,39 @@
 				animation-name: fade
 				animation-duration: .5s
 				display: block
+
+.author
+	padding-top: 140px
+	.container
+		display: flex
+	&-photo
+		width: 50%
+		margin-right: 70px
+	&-wrap
+		width: 50%
+	h2
+		padding: 0
+		margin-bottom: 30px
+		&:after
+			display: none
+	&-name
+		color: $accent
+		font-size: 24px
+		letter-spacing: 0.05em
+		margin: 0
+		margin-bottom: 20px
+		@extend %muller
+		&__description
+			color: #7b7b7b
+			margin-bottom: 40px
+	&-about
+		margin-bottom: 50px
+		padding-right: 30px
+		border-right: 1px solid $accent
+	&-instagram
+		text-decoration: underline
+
 // modal
-// .more-splash 
-// 	animation-name: splash
-// 	animation-duration: 1.7s
-
-// @keyframes splash
-//   from
-//     box-shadow: 0 0 10px #c78030
-  
-//   to
-//     box-shadow: 0 0 60px #c78030
-
 .overlay
 	position: fixed
 	top: 0
@@ -483,3 +504,5 @@
 	float: right
 	&:hover
 		opacity: 0.8
+
+
