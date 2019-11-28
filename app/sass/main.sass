@@ -443,11 +443,35 @@
 		padding: 40px
 		border-radius: 5px
 		background-color: #fff
+		overflow-y: auto
+		max-height: 90vh
 		&-close
 			outline: 0
 			border: 0
 			padding: 0
 			background-color: transparent
 			position: absolute
-			top: 0
+			top: 20px
 			right: 25px
+
+.module-title
+	@extend %muller
+	font-size: 32px
+	text-align: center
+	margin: 40px 0
+.module-list
+	list-style-position: inside
+	padding-left: 0
+	&__item
+		font-size: 24px
+		margin-bottom: 20px
+		ul
+			margin-top: 10px
+			padding-left: 30px
+			li
+				color: #7b7b7b
+				font-size: 18px
+				font-weight: normal
+				list-style-type: disc
+				&::marker
+					color: $accent
