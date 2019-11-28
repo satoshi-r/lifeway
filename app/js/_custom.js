@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// Accordion
 	const acc = document.getElementsByClassName("accordion");
-	
+
 	for (i = 0; i < acc.length; i++) {
 		acc[i].addEventListener("click", function () {
 			this.classList.toggle("active");
@@ -51,7 +51,41 @@ document.addEventListener("DOMContentLoaded", function () {
 				panel.style.maxHeight = panel.scrollHeight + "px";
 				this.style.marginBottom = '20px';
 			}
-			
+
 		});
 	}
+
+	// Modal
+
+	const more = document.querySelectorAll('.content-item__btn'),
+		overlay = document.querySelector('.overlay'),
+		popup = document.querySelector('.popup-wrapper'),
+		close = document.querySelector('.popup-close'),
+		closeEl = [close, overlay];
+
+	more.forEach(function (btn) {
+		btn.addEventListener("click", function () {
+			overlay.style.display = "block";
+			popup.style.display = "flex";
+			document.body.style.overflow = 'hidden';
+		})
+	});
+	
+	closeEl.forEach(function (el) {
+		el.addEventListener('click', function () {
+			overlay.style.display = 'none';
+			popup.style.display = 'none';
+			document.body.style.overflow = '';
+		})
+	});
+
+	addEventListener("keydown", function (event) {
+		if (event.keyCode == 27) {
+			event.stopPropagation();
+			closeModal();
+		}
+	});
+	
+	
+
 });
