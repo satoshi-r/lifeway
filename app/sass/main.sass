@@ -166,7 +166,7 @@
 		top: 0
 		right: 0
 	&__title-description
-		color: #7b7b7b
+		color: $grey
 		margin-top: 60px
 		margin-bottom: 60px
 		width: 60%
@@ -264,7 +264,7 @@
 .about
 	padding-top: 200px
 	&-title__description
-		color: #7b7b7b
+		color: $grey
 		margin-top: 60px
 		margin-bottom: 60px
 		width: 56%
@@ -318,7 +318,7 @@
 	.container
 		position: relative
 	&__title-description
-		color: #7b7b7b
+		color: $grey
 		margin-top: 60px
 		margin-bottom: 60px
 		width: 60%
@@ -428,14 +428,80 @@
 		margin-bottom: 20px
 		@extend %muller
 		&__description
-			color: #7b7b7b
+			color: $grey
 			margin-bottom: 40px
 	&-about
 		margin-bottom: 50px
 		padding-right: 30px
 		border-right: 1px solid $accent
-	&-instagram
-		text-decoration: underline
+
+.price
+	padding-top: 140px
+	&-title__description
+		color: $grey
+		margin-top: 60px
+		margin-bottom: 60px
+		padding-left: 85px
+		a
+			color: $accent
+
+	.plan-wrap
+		display: flex
+		justify-content: space-around
+		align-items: flex-start
+	.plan
+		width: 330px
+		padding-top: 40px
+		padding-right: 60px
+		padding-left: 60px
+		padding-bottom: 30px
+		border-radius: 15px
+		&:first-child
+			background-color: #fcefe6
+		&:nth-child(2)
+			background-color: #faf5f1
+		&:last-child
+			background-color: #f4f2f0
+		&-title
+			@extend %muller
+			margin-bottom: 35px
+			text-align: center
+		&-price
+			display: flex
+			justify-content: center
+			align-items: center
+			font-size: 30px
+			color: $accent
+			height: 78px
+			font-weight: bold
+			border-bottom: 1px solid #e7d1ba
+			border-top: 1px solid #e7d1ba
+			margin-bottom: 25px
+			img
+				margin-left: 15px
+
+		&-list
+			padding: 0
+			&__item
+				font-size: 14px
+				margin-bottom: 10px
+				list-style-type: none
+				&:before
+					content: '+'
+					font-size: 18px
+					font-weight: bold
+					color: $accent
+					display: inline
+					margin-right: 5px
+				&:last-of-type
+					margin-bottom: 40px
+			
+		&-btn
+			width: 136px
+			height: 36px
+			display: block
+			margin: auto
+			
 
 // modal
 .overlay
@@ -489,7 +555,7 @@
 			margin-top: 10px
 			padding-left: 30px
 			li
-				color: #7b7b7b
+				color: $grey
 				font-size: 18px
 				font-weight: normal
 				list-style-type: disc
