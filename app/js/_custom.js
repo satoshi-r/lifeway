@@ -100,6 +100,19 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	});
 
+	// slider
+	var slider = tns({
+		container: '.slider',
+		items: 1,
+		nav: false,
+		controlsContainer: '.slider-btn__wrap',
+		prevButton: '.prev-btn',
+		nextButton: '.next-btn',
+		swipeAngle: false,
+		fixedWidth: 720,
+		gutter: 300,
+		mode: "carousel",
+	});
 
 
 });

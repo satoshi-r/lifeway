@@ -23,5 +23,7 @@
 		"gulp-sass": "^4.0.2",
 		"gulp-uglify-es": "^1.0.4"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"tiny-slider": "^2.9.2"
+	}
 }

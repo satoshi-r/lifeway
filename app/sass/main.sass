@@ -502,6 +502,109 @@
 			display: block
 			margin: auto
 			
+.reviews
+	padding-top: 140px
+	&-title__description
+		color: $grey
+		margin-top: 60px
+		margin-bottom: 60px
+		padding-left: 85px
+	&-wrap
+		background-color: #faf5f1
+		padding-top: 60px
+		padding-bottom: 50px
+	&-btn
+		margin: auto
+		margin-top: 60px
+		background-color: transparent
+		font-size: 14px
+		text-transform: uppercase
+		color: $accent
+		display: block
+		&:hover
+			background-color: transparent
+			text-decoration: underline
+			opacity: 0.8
+	.sm-container
+		padding: 0 85px
+		position: relative
+
+
+// slider
+.slider
+	padding: 0 125px
+.slider-btn__wrap
+	position: absolute
+	width: 100%
+	max-width: 970px
+	height: 100%
+	display: flex
+	align-items: center
+	justify-content: space-between
+	button
+		position: relative
+		z-index: 10
+
+.prev-btn, .next-btn
+	background-repeat: no-repeat
+	width: 36px
+	height: 26px
+	border: 0
+	padding: 0
+	outline: 0
+	background-color: transparent
+	background-position: 0 0
+	
+
+.prev-btn
+	background-image: url('../img/@2x/left-arrow.png')
+
+.next-btn
+	background-image: url('../img/@2x/right-arrow.png')
+	opacity: 0.7
+
+.author-review__wrap
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin-bottom: 60px
+
+.author-review
+	display: flex
+	align-items: center
+	&__name
+		font-weight: bold
+		color: $accent
+		margin-left: 25px
+	&__instagram
+		display: flex
+		align-items: center
+		p
+			font-size: 14px
+			text-decoration: underline
+			margin: 0
+			margin-right: 5px
+.review-text
+	position: relative
+	&:before
+		content: ''
+		background-image: url('../img/@2x/left-quote.png')
+		background-repeat: no-repeat
+		width: 60px
+		height: 48px
+		background-size: contain
+		position: absolute
+		top: -15px
+		left: -60px
+	&:after
+		content: ''
+		background-image: url('../img/@2x/right-quote.png')
+		background-repeat: no-repeat
+		width: 60px
+		height: 48px
+		background-size: contain
+		position: absolute
+		right: -60px
 
 // modal
 .overlay
@@ -536,6 +639,7 @@
 	height: 40px
 	margin-top: 10px
 	margin-left: auto
+	
 
 .popup-wrapper
 	align-items: center
