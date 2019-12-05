@@ -16,6 +16,7 @@
 		"gulp-autoprefixer": "^7.0.0",
 		"gulp-clean-css": "^4.2.0",
 		"gulp-concat": "^2.6.1",
+		"gulp-debug": "^4.0.0",
 		"gulp-newer": "^1.4.0",
 		"gulp-rename": "^1.4.0",
 		"gulp-responsive": "^2.14.0",
@@ -24,6 +25,6 @@
 		"gulp-uglify-es": "^1.0.4"
 	},
 	"dependencies": {
-		"tiny-slider": "^2.9.2"
+		"tiny-slider": "latest"
 	}
 }

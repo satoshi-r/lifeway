@@ -9,6 +9,7 @@ var gulp         = require('gulp'),
 		newer        = require('gulp-newer'),
 		rename       = require('gulp-rename'),
 		responsive   = require('gulp-responsive'),
+		debug				 = require('gulp-debug'),
 		del          = require('del');
 
 // Local Server
@@ -105,6 +106,44 @@ gulp.task('rsync', function() {
 		compress: true
 	}))
 });
+
+// build
+gulp.task('css:public', function() {
+	return gulp.src('app/css/*.css')
+	.pipe(gulp.dest('public/css'))
+	.pipe(debug({title: 'dest'}))	
+});
+
+gulp.task('js:public', function() {
+	return gulp.src('app/js/scripts.min.js')
+	.pipe(gulp.dest('public/js/'))
+	.pipe(debug({title: 'dest'}))
+});
+
+gulp.task('html:public', function() {
+	return gulp.src('app/*.{html,htaccess,access}')
+	.pipe(gulp.dest('public/'))
+	.pipe(debug({title: 'dest'}))
+});
+
+gulp.task('img:public', function() {
+	return gulp.src(['app/img/@*/**', 'app/img/*.{png,jpg,jpeg,webp,raw,ico}'])
+	.pipe(gulp.dest('public/img/'))
+	.pipe(debug({title: 'dest'}))
+});
+
+gulp.task('fonts:public', function() {
+	return gulp.src(['app/fonts/*', '!app/fonts/_src/**'])
+	.pipe(gulp.dest('public/fonts/'))
+	.pipe(debug({title: 'dest'}))
+});
+
+gulp.task('clean:public', function() {
+	return del('public')
+});
+
+gulp.task('public', gulp.series('clean:public', gulp.parallel('css:public', 'js:public', 'html:public', 'img:public', 'fonts:public')));
+// end build
 
 gulp.task('watch', function() {
 	gulp.watch('app/sass/**/*.sass', gulp.parallel('styles'));
