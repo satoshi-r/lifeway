@@ -85,7 +85,7 @@ gulp.task('img-responsive-1x', async function () {
 });
 // Produce @2x images
 gulp.task('img-responsive-2x', async function () {
-	return gulp.src('app/img/_src/**/*.{png,jpg,jpeg,webp,raw}')
+	return gulp.src('app/img/_src/**/*.{png,jpg,jpeg,webp,raw,svg}')
 		.pipe(imagemin({
 			progressive: true,
 			svgoPlugins: [{ removeViewBox: false }],
@@ -149,7 +149,7 @@ gulp.task('html:public', function () {
 });
 
 gulp.task('img:public', function () {
-	return gulp.src(['app/img/@*/**', 'app/img/*.{png,jpg,jpeg,webp,raw,ico}'])
+	return gulp.src(['app/img/@*/**', 'app/img/*.{png,jpg,jpeg,webp,raw,ico,svg}'])
 		.pipe(gulp.dest('public/img/'))
 		.pipe(debug({ title: 'dest' }))
 });
