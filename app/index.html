@@ -899,7 +899,7 @@
 
 					</div>
 
-					<button class="btn reviews-btn">оставить отзыв</button>
+					<button class="btn reviews-btn open-modal-js">оставить отзыв</button>
 				</div>
 			</div>
 
@@ -1056,11 +1056,26 @@
 	<div class="popup-wrapper popup-price">
 		<div class="overlay"></div>
 		<div class="popup">
+			<div class="popup-price__title">Оставьте заявку</div>
 			<form action="" id="price-form">
-				<input type="text" name="name" id="input-id" placeholder="Имя" required>
-				<input type="tel" name="tel" id="input-tel" placeholder="Телефон" required>
-				<input type="email" name="email" id="input-email" placeholder="E-mail" required>
+				<input type="text" name="name" id="price-name" placeholder="Имя" required>
+				<input type="tel" name="tel" id="price-tel" placeholder="Телефон" required>
+				<input type="email" name="email" id="price-email" placeholder="E-mail" required>
 				<button class="btn price-form__btn" type="submit">Отправить</button>
+			</form>
+			<button class="popup-close"><img src="img/@2x/close-button.png" alt="x"></button>
+		</div>
+	</div>
+
+	<div class="popup-wrapper popup-reviews">
+		<div class="overlay"></div>
+		<div class="popup">
+			<div class="popup-reviews__title">Оставьте отзыв</div>
+			<form action="" id="reviews-form">
+				<input type="text" name="name" id="reviews-id" placeholder="Имя" required>
+				<input type="email" name="email" id="reviews-email" placeholder="E-mail" required>
+				<textarea name="review" id="reviews-text" placeholder="Напишите что-нибудь..." required></textarea>
+				<button class="btn reviews-form__btn" type="submit">Отправить</button>
 			</form>
 			<button class="popup-close"><img src="img/@2x/close-button.png" alt="x"></button>
 		</div>
