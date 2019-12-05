@@ -116,6 +116,7 @@ gulp.task('css:public', function() {
 
 gulp.task('js:public', function() {
 	return gulp.src('app/js/scripts.min.js')
+	.pipe(uglify())
 	.pipe(gulp.dest('public/js/'))
 	.pipe(debug({title: 'dest'}))
 });
