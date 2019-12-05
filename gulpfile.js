@@ -11,6 +11,7 @@ var gulp = require('gulp'),
 	responsive = require('gulp-responsive'),
 	imagemin = require('gulp-imagemin'),
 	pngquant = require('imagemin-pngquant'),
+	notify = require('gulp-notify'),
 	debug = require('gulp-debug'),
 	del = require('del');
 
@@ -33,6 +34,12 @@ gulp.task('styles', function () {
 		.pipe(sass({
 			outputStyle: 'expanded',
 			includePaths: [__dirname + '/node_modules']
+		}))
+		.on('error', notify.onError(function (err) {
+			return {
+				title: 'Styles',
+				message: err.message
+			}
 		}))
 		.pipe(concat('styles.min.css'))
 		.pipe(autoprefixer({
