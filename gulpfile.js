@@ -51,12 +51,11 @@ gulp.task('styles', function () {
 		.pipe(browserSync.stream())
 });
 
-// Scripts & JS Libraries
+// Scripts & JS Libraries (библиотеки в начало)
 gulp.task('scripts', function () {
 	return gulp.src([
-		// 'node_modules/jquery/dist/jquery.min.js', // Optional jQuery plug-in (npm i --save-dev jquery)
-		'app/js/_libs.js', // JS libraries (all in one)
-		'app/js/_custom.js', // Custom scripts. Always at the end
+		'node_modules/tiny-slider/dist/min/tiny-slider.js', 
+		'app/js/_*.js'
 	])
 		.pipe(concat('scripts.min.js'))
 		//.pipe(uglify()) // Minify js (opt.)
