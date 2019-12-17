@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		overlay = document.querySelectorAll('.overlay'),
 		close = document.querySelectorAll('.popup-close'),
 		btnClose = document.querySelectorAll('.module-btn__close'),
+		popupForm = document.querySelector('#price-form'),
 		closeSelectors = [close, overlay, btnClose];
 
 	let popup;
@@ -68,26 +69,34 @@ document.addEventListener("DOMContentLoaded", function () {
 	openBtn.forEach(function (btn) {
 		btn.addEventListener("click", function (event) {
 			if (event.target.classList.contains('plan-btn')) {
-				popup = document.querySelector('.popup-price');
-				popup.style.display = "flex";
-				document.body.style.overflow = 'hidden';
+				openModal('.popup-price');
+				
+				if (event.target.classList.contains('plan1-js')) {
+					popupForm.className = 'plan1-js';
+				} else if (event.target.classList.contains('plan2-js')) {
+					popupForm.className = 'plan2-js';
+				} else {
+					popupForm.className = 'plan3-js';
+				}
 
 			} else if (event.target.classList.contains('reviews-btn')) {
-				popup = document.querySelector('.popup-reviews');
-				popup.style.display = "flex";
-				document.body.style.overflow = 'hidden';
-
+				openModal('.popup-reviews');
 			} else {
-				popup = document.querySelector('.popup-content');
-				popup.style.display = "flex";
-				document.body.style.overflow = 'hidden';
+				openModal('.popup-content');
 			}
 		})
 	});
 
+	function openModal(modal) {
+		popup = document.querySelector(modal);
+		popup.style.display = "flex";
+		document.body.style.overflow = 'hidden';
+	} 
+
 	function closePopup() {
 		popup.style.display = 'none';
 		document.body.style.overflow = '';
+		popupForm.className = '';
 	}
 
 	closeSelectors.forEach(function (arr) {
@@ -162,15 +171,38 @@ document.addEventListener("DOMContentLoaded", function () {
 			if (this.value.length == 2) this.value = ""
 		} else setCursorPosition(this.value.length, this)
 	};
-	var input = document.querySelector('input[type="tel"]');
+	let input = document.querySelector('input[type="tel"]');
 	input.addEventListener("input", mask, false);
 	input.addEventListener("focus", mask, false);
 	input.addEventListener("blur", mask, false);
 
 
 	//form
-	const priceForm = document.querySelector('#price-form'),
-		reviewsForm = document.querySelector('#reviews-form');
+	const forms = document.querySelectorAll('form');
 
-	
+	forms.forEach(form => {
+		form.onsubmit = function (event) {
+			event.preventDefault();
+
+			if (event.target.id == 'price-form') {
+				let title;
+				if (event.target.className == 'plan1-js') {
+					title = 'Иду%20с%20наставником&'
+				} else if (event.target.className == 'plan2-js') {
+					title = 'Иду%20с%20поддержкой&'
+				} else if (event.target.className == 'plan3-js') {
+					title = 'Иду%20самостоятельно&'
+				}
+				console.log(title + serialize(this));
+			} else {
+				console.log(serialize(this));
+			}
+
+			for (const inputs of form) {
+				inputs.disabled = true;
+			}
+		}
+
+	});
+
 });
