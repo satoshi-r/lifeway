@@ -147,9 +147,19 @@
 		margin-bottom: 50px
 		&:nth-child(odd)
 			margin-right: 50px
-		img
-			width: 96px
+		&-img
+			min-width: 96px
 			height: 96px
+			background-repeat: no-repeat
+			background-size: cover
+			&:first-child
+				background-image: url('../img/@2x/resolve-icon1.png')
+			&:nth-child(2)
+				background-image: url('../img/@2x/resolve-icon2.png')
+			&:nth-child(3)
+				background-image: url('../img/@2x/resolve-icon3.png')
+			&:last-child
+				background-image: url('../img/@2x/resolve-icon4.png')
 	.resolve__text-wrap
 		margin-left: 30px
 		line-height: 1.3
