@@ -108,7 +108,7 @@
 
   .scientific
     &__tabs
-      width: 270px
+      min-width: 270px
     .tab-content
       padding-left: 20px
       padding-right: 20px
@@ -183,4 +183,32 @@
     .footer-conditions
       font-size: 12px
 
-// @media screen and (max-width: 838px)
+@media screen and (max-width: 838px)
+  .whatfor
+    &__text-wrap
+      font-size: 16px
+
+  .scientific
+    &__title-description
+      font-size: 16px
+      width: 100%
+    .tab-content
+      padding-top: 40px
+      padding-bottom: 40px
+      &__title
+        font-size: 20px
+        margin-bottom: 20px
+      &__description
+        font-size: 16px
+    .accordion
+      font-size: 16px
+      &__panel
+        font-size: 16px
+    &__tabs
+      padding-top: 90px
+
+  .reviews
+    .review-text
+      text-align: center
+      &:before
+        left: -40px

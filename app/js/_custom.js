@@ -137,6 +137,10 @@ document.addEventListener("DOMContentLoaded", function () {
 			838: {
 				fixedWidth: 300,
 				gutter: 250
+			},
+			768: {
+				fixedWidth: 300,
+				gutter: 200
 			}
 		}
 	});
