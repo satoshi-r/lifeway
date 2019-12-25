@@ -141,6 +141,13 @@ document.addEventListener("DOMContentLoaded", function () {
 			768: {
 				fixedWidth: 300,
 				gutter: 200
+			},
+			576: {
+				mouseDrag: true,
+				controls: false,
+				fixedWidth: 300, 
+				edgePadding: -10, // влево
+				gutter: 200 // вправо
 			}
 		}
 	});
