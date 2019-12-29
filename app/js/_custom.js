@@ -33,6 +33,25 @@ document.addEventListener("DOMContentLoaded", function () {
 				}
 			}
 		}
+
+	});
+
+	// adaptive tabs
+	const tabsOpen = document.querySelector('.scientific__menu'),
+		tabsClose = document.querySelector('.scientific__tabs-closeBtn button'),
+		tabsMenu = document.querySelector('.scientific__tabs'),
+		tabsContent = document.querySelector('.tab-content');
+
+	tabsOpen.addEventListener('click', function () {
+		tabsMenu.classList.add('tabsOpen')
+	});
+
+	tabsClose.addEventListener('click', function () {
+		tabsMenu.classList.remove('tabsOpen')
+	});
+
+	tabsContent.addEventListener('click', function () {
+		tabsMenu.classList.remove('tabsOpen')
 	});
 
 	// Accordion
@@ -148,6 +167,11 @@ document.addEventListener("DOMContentLoaded", function () {
 				fixedWidth: 300, 
 				edgePadding: -10, // влево
 				gutter: 200 // вправо
+			},
+			480: {
+				fixedWidth: 280,
+				gutter: 180,
+				edgePadding: -30
 			}
 		}
 	});
@@ -228,5 +252,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 
 	});
+
 
 });

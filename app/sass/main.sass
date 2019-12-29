@@ -195,6 +195,15 @@
 		border-radius: 15px
 		background-color: #faf5f1
 		display: flex
+	&__menu
+		display: none
+		outline: 0
+		border: 0
+		padding: 0
+		background-color: transparent
+		&:active, &:focus
+			outline: 0
+			border: 0
 	&__tabs
 		list-style-type: none
 		padding-left: 75px
@@ -207,6 +216,15 @@
 		height: 100%
 		border-top-left-radius: 15px
 		border-bottom-left-radius: 15px
+		&-closeBtn button
+			display: none
+			outline: 0
+      border: 0
+      padding: 0
+			background-color: transparent
+			&:active, &:focus
+				outline: 0
+				border: 0
 		&-item
 			color: #cacaca
 			font-weight: bold
