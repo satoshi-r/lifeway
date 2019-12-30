@@ -367,10 +367,20 @@
 		height: 52px
 		top: 18px
 		right: 18px
+	&-controls
+		display: none
 	&-wrap
 		display: flex
 		min-height: 800px
 		width: 100%
+	.content_item1
+		background-image: url('../img/@2x/content_basics1.png')
+	.content_item2
+		background-image: url('../img/@2x/content_basics2.png')
+	.content_item3
+		background-image: url('../img/@2x/content_basics3.png')
+	.content_item4
+		background-image: url('../img/@2x/content_basics4.png')
 	&-item
 		background-size: cover
 		background-repeat: no-repeat
@@ -383,14 +393,6 @@
 		text-align: center
 		color: #fff
 		justify-content: flex-end
-		&:first-child
-			background-image: url('../img/@2x/content_basics1.png')
-		&:nth-child(2)
-			background-image: url('../img/@2x/content_basics2.png')
-		&:nth-child(3)
-			background-image: url('../img/@2x/content_basics3.png')
-		&:last-child
-			background-image: url('../img/@2x/content_basics4.png')
 		&__title
 			@extend %muller
 			font-size: 32px
@@ -469,6 +471,9 @@
 		margin-bottom: 50px
 		padding-right: 30px
 		border-right: 1px solid $accent
+
+	&__mobile-title
+		display: none
 
 .price
 	padding-top: 140px
