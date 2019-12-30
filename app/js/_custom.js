@@ -139,10 +139,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		items: 1,
 		nav: false,
 		controlsContainer: '.slider-btn__wrap',
-		prevButton: '.prev-btn',
-		nextButton: '.next-btn',
+		prevButton: '.reviews__prev-btn',
+		nextButton: '.reviews__next-btn',
 		swipeAngle: false,
-		
 		mode: "carousel",
 		responsive: {
 			1200: {
@@ -173,12 +172,19 @@ document.addEventListener("DOMContentLoaded", function () {
 				gutter: 180,
 				edgePadding: -30
 			},
+			440: {
+				edgePadding: -40
+			},
+			380: {
+				edgePadding: -75,
+				fixedWidth: 280
+			},
 			320: {
 				mouseDrag: true,
 				controls: false,
-				fixedWidth: 260,
+				fixedWidth: 240,
 				gutter: 180,
-				edgePadding: -110
+				edgePadding: -90
 			}
 		}
 	});
@@ -192,8 +198,8 @@ document.addEventListener("DOMContentLoaded", function () {
 			const sliderContent = tns({
 				container: '.content-wrap',
 				controlsContainer: '.content-controls',
-				prevButton: '.prev-btn',
-				nextButton: '.next-btn',
+				prevButton: '.content__prev-btn',
+				nextButton: '.content__next-btn',
 				items: 1,
 				nav: false,
 				mouseDrag: true
