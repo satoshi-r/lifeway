@@ -411,12 +411,20 @@
 			width: 300px
 			margin: auto
 			list-style-position: inside
+			list-style: none
+			counter-reset: content_list
 			&-item
 				margin-bottom: 30px
 				line-height: 1
-				&::marker
+				counter-increment: content_list
+				&:before
+					content: counter(content_list)
 					font-weight: bold
+					margin-right: 5px
 					color: $accent
+				// &::marker
+				// 	font-weight: bold
+				// 	color: $accent
 		&__btn
 			display: none
 			color: $accent
@@ -597,17 +605,17 @@ footer
 // slider
 .slider
 	padding: 0 125px
-.slider-btn__wrap
-	position: absolute
-	width: 100%
-	max-width: 970px
-	height: 100%
-	display: flex
-	align-items: center
-	justify-content: space-between
-	button
-		position: relative
-		z-index: 3
+	&-btn__wrap
+		position: absolute
+		width: 100%
+		max-width: 970px
+		height: 100%
+		display: flex
+		align-items: center
+		justify-content: space-between
+		button
+			position: relative
+			z-index: 3
 
 .prev-btn, .next-btn
 	background-repeat: no-repeat
