@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		btn.addEventListener("click", function (event) {
 			if (event.target.classList.contains('plan-btn')) {
 				openModal('.popup-price');
-				
+
 				if (event.target.classList.contains('plan1-js')) {
 					popupForm.className = 'plan1-js';
 				} else if (event.target.classList.contains('plan2-js')) {
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		popup = document.querySelector(modal);
 		popup.style.display = "flex";
 		document.body.style.overflow = 'hidden';
-	} 
+	}
 
 	function closePopup() {
 		popup.style.display = 'none';
@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				controls: true
 			},
 			576: {
-				fixedWidth: 300, 
+				fixedWidth: 300,
 				edgePadding: -10, // влево
 				gutter: 200 // вправо
 			},
@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 		}
 	});
-	// apaptive content section, create slider
+	// apaptive content sections, create slider
 	const mediaQuery = window.matchMedia("screen and (max-width: 768px)");
 	mediaQuery.addListener(createSliderContent);
 	createSliderContent(mediaQuery);
@@ -203,10 +203,15 @@ document.addEventListener("DOMContentLoaded", function () {
 				items: 1,
 				nav: false,
 				mouseDrag: true
-			});
+			})
+			const sliderPrice = tns({
+				container: '.plan-wrap',
+				mouseDrag: true,
+				controls: false
+			})
 		}
 	}
-	
+
 
 	// ScrollTo
 	const anchors = document.querySelectorAll('a[href*="#"]')
